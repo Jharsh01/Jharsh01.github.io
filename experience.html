@@ -2,24 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Experience | Jayaprakash Harshavardhan</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Professional Experience</h1>
+    <h1>Jayaprakash Harshavardhan</h1>
+    <p>Mechanical Engineer | Robotics & Controls Enthusiast</p>
     <nav>
       <a href="index.html">About</a>
       <a href="projects.html">Projects</a>
-      <a href="experience.html">Experience</a>
-      <a href="resume.pdf" target="_blank">Resume</a>
+      <a href="experience.html" class="active">Experience</a>
+      <a href="resume.html">Resume</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
-  <main>
-    <p><strong>Magna International</strong> – Designed OTA architecture and Blackbox systems for autonomous delivery bots.</p>
-    <p><strong>LATTICE</strong> – Implemented multi-agent path planning at LAX using improved CBS.</p>
+
+  <main class="experience">
+    <h2>Professional Experience</h2>
+
+    <div class="job-card">
+      <h3>Controls Intern – Magna International (New Mobility Division)</h3>
+      <p><strong>May 2024 – Mar 2025 | Troy, United States</strong></p>
+      <ul>
+        <li>Developed OTA update architecture to maintain latest version in bot’s docker containers over cloud-managed FMS.</li>
+        <li>Designed a streaming pipeline to store data/video with logging architecture deployed as a Blackbox.</li>
+        <li>Created a ROS2 package to convert CAN signals into custom ROS messages for sensor integration.</li>
+        <li>Configured modem, static IP, routing setup; updated teleoperations API.</li>
+        <li>Collaborated with suppliers to bring up GNSS service over SPI and publish corrected ROS messages.</li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <h3>Graduate Researcher – LATTICE (Airport Airside Project)</h3>
+      <p><strong>Jan 2024 – Apr 2024 | Ann Arbor, United States</strong></p>
+      <ul>
+        <li>Developed weighted matrix for LAX airport in a graph structure for MAPF.</li>
+        <li>Implemented improved CBS algorithm with A* and conflict tree to simulate traffic flow.</li>
+        <li>Added time/path constraints for realism in ground traffic simulation.</li>
+      </ul>
+    </div>
+
+    <div class="job-card">
+      <h3>Mechatronics Intern – Kanan Park (Electrical Division)</h3>
+      <p><strong>Jun 2023 – Jul 2023 | Pune, India</strong></p>
+      <ul>
+        <li>Programmed an autonomous differential drive vehicle to follow curved lane paths.</li>
+        <li>Integrated Flask for Wi-Fi-based mobile control as a failsafe option.</li>
+      </ul>
+    </div>
   </main>
-  <footer><p>&copy; 2025 Jayaprakash Harshavardhan</p></footer>
+
+  <footer>
+    <p>© 2025 Jayaprakash Harshavardhan</p>
+  </footer>
 </body>
 </html>
