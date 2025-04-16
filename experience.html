@@ -4,12 +4,15 @@
   <meta charset="UTF-8" />
   <title>Experience | Jayaprakash Harshavardhan</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>Jayaprakash Harshavardhan</h1>
-    <p>Mechanical Engineer | Robotics & Controls Enthusiast</p>
-    <nav>
+  <div class="page-wrapper"> <!-- enables sticky footer layout -->
+
+    <header>
+      <h1>Jayaprakash Harshavardhan</h1>
+      <p>Mechanical Engineer | Robotics & Controls Enthusiast</p>
+      <nav>
         <div class="nav-links">
           <a href="index.html">About</a>
           <a href="projects.html">Projects</a>
@@ -18,45 +21,47 @@
         </div>
         <a href="resume.pdf" target="_blank" class="btn-glow">Resume</a>
       </nav>
-  </header>
+    </header>
 
-  <main class="experience">
-    <h2>Professional Experience</h2>
+    <main class="experience">
+      <h2>Professional Experience</h2>
 
-    <div class="job-card">
-      <h3>Controls Intern - Magna International (New Mobility Division)</h3>
-      <p><strong>May 2024 - Mar 2025 | Troy, United States</strong></p>
-      <ul>
-        <li>Developed OTA update architecture to maintain latest version in bot's docker containers over cloud-managed FMS.</li>
-        <li>Designed a streaming pipeline to store data/video with logging architecture deployed as a Blackbox.</li>
-        <li>Created a ROS2 package to convert CAN signals into custom ROS messages for sensor integration.</li>
-        <li>Configured modem, static IP, routing setup; updated teleoperations API.</li>
-        <li>Collaborated with suppliers to bring up GNSS service over SPI and publish corrected ROS messages.</li>
-      </ul>
-    </div>
+      <div class="job-card">
+        <h3>Controls Intern – Magna International (New Mobility Division)</h3>
+        <p><strong>May 2024 – Mar 2025 | Troy, United States</strong></p>
+        <ul>
+          <li>Developed OTA update architecture for containerized bots using a cloud-managed FMS.</li>
+          <li>Designed data/video logging pipeline deployed as a Blackbox system.</li>
+          <li>Created ROS2 packages to convert CAN signals to custom messages.</li>
+          <li>Configured modems, routing, and static IPs; updated teleoperation APIs.</li>
+          <li>Integrated corrected GNSS data over SPI with RTCM messages via ROS.</li>
+        </ul>
+      </div>
 
-    <div class="job-card">
-      <h3>Graduate Researcher - LATTICE (Airport Airside Project)</h3>
-      <p><strong>Jan 2024 - Apr 2024 | Ann Arbor, United States</strong></p>
-      <ul>
-        <li>Developed weighted matrix for LAX airport in a graph structure for MAPF.</li>
-        <li>Implemented improved CBS algorithm with A* and conflict tree to simulate traffic flow.</li>
-        <li>Added time/path constraints for realism in ground traffic simulation.</li>
-      </ul>
-    </div>
+      <div class="job-card">
+        <h3>Graduate Researcher – LATTICE (Airport Airside Project)</h3>
+        <p><strong>Jan 2024 – Apr 2024 | Ann Arbor, United States</strong></p>
+        <ul>
+          <li>Modeled LAX as a weighted graph to simulate multi-agent pathfinding.</li>
+          <li>Implemented CBS with A* and conflict tree for realistic airport routing.</li>
+          <li>Incorporated time and path constraints for real-world simulation fidelity.</li>
+        </ul>
+      </div>
 
-    <div class="job-card">
-      <h3>Mechatronics Intern - Kanan Park (Electrical Division)</h3>
-      <p><strong>Jun 2023 - Jul 2023 | Pune, India</strong></p>
-      <ul>
-        <li>Programmed an autonomous differential drive vehicle to follow curved lane paths.</li>
-        <li>Integrated Flask for Wi-Fi-based mobile control as a failsafe option.</li>
-      </ul>
-    </div>
-  </main>
+      <div class="job-card">
+        <h3>Mechatronics Intern – Kanan Park (Electrical Division)</h3>
+        <p><strong>Jun 2023 – Jul 2023 | Pune, India</strong></p>
+        <ul>
+          <li>Programmed autonomous differential drive vehicle to follow lane paths.</li>
+          <li>Enabled mobile Wi-Fi control via Flask as a manual override system.</li>
+        </ul>
+      </div>
+    </main>
 
-  <footer>
-    <p>© 2025 Jayaprakash Harshavardhan</p>
-  </footer>
+    <footer>
+      <p>&copy; 2025 Jayaprakash Harshavardhan</p>
+    </footer>
+    
+  </div>
 </body>
 </html>
