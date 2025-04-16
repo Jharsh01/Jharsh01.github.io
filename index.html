@@ -2,24 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <a href="index.html" class="site-logo" aria-label="Homepage">
-    <img src="images/logo.png" class="octagon-img" alt="Octagon Logo" />
-  </a>
   <title>About | Jayaprakash Harshavardhan</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
-<!-- Or if using .ico: -->
-<link rel="icon" href="favicon.ico" />
-
-  <!-- Add this to your <head> section -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
-
-  
-  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;750&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -28,7 +15,6 @@
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
       };
-
       const appearOnScroll = new IntersectionObserver(function (entries, observer) {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
@@ -44,40 +30,34 @@
   </script>
 </head>
 <body>
-    <aside class="social-icons">
-        <ul>
-          <li>
-            <a href="https://github.com/Jharsh01" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/jayaprakash-harshavardhan-8b49281aa/" target="_blank">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://scholar.google.com/citations?hl=en&user=DAONseUAAAAJ&view_op=list_works&gmla=ANZ5fUPf0DRjP_5Vc1iCMo9UG4giVS5Ttu5pk50aVu32wH4SGNlV5Z5O1WslAQNs8-XsZJPvOz3hGAY39bM4Ml6r" target="_blank">
-              <i class="fas fa-graduation-cap"></i>
-            </a>
-          </li>
-        </ul>
-      </aside>
-      
-  <div class="page-wrapper">
+  <aside class="social-icons">
+    <ul>
+      <li><a href="https://github.com/Jharsh01" target="_blank"><i class="fab fa-github"></i></a></li>
+      <li><a href="https://www.linkedin.com/in/jayaprakash-harshavardhan-8b49281aa/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+      <li><a href="https://scholar.google.com/citations?user=DAONseUAAAAJ" target="_blank"><i class="fas fa-graduation-cap"></i></a></li>
+    </ul>
+  </aside>
 
+  <div class="page-wrapper">
     <header>
-      <h1>Jayaprakash Harshavardhan</h1>
-      <p>Mechanical Engineer | Robotics & Controls Enthusiast</p>
-      <nav>
-        <div class="nav-links">
-          <a href="index.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="experience.html">Experience</a>
-          <a href="contact.html">Contact</a>
+      <div class="header-main">
+        <a href="index.html" class="site-logo" aria-label="Homepage">
+          <img src="images/logo.png" class="octagon-img" alt="Octagon Logo" />
+        </a>
+        <div class="title-block">
+          <h1>Jayaprakash Harshavardhan</h1>
+          <p>Mechanical Engineer | Robotics & Controls Enthusiast</p>
         </div>
-        <a href="resume.pdf" target="_blank" class="btn-glow">Resume</a>
-      </nav>
+        <nav class="nav-right">
+          <div class="nav-links">
+            <a href="index.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <a href="resume.pdf" target="_blank" class="btn-glow">Resume</a>
+        </nav>
+      </div>
     </header>
 
     <main>
@@ -88,7 +68,7 @@
         </div>
         <div class="about-text">
           <p>
-            I'm a Mechanical Engineering graduate with a strong interest in robotics, control systems, and autonomous technologies. Through hands-on internships and academic projects, I've gained experience working with embedded systems, mechatronics, and software tools like ROS2, Simulink, and Python. I enjoy solving complex problems by combining mechanical principles with software development. My background includes work on autonomous robots, vehicle dynamics, and real-time control systems. I'm always eager to learn, collaborate, and take on challenging projects that push the boundaries of innovation in engineering and technology.
+            I'm a Mechanical Engineering graduate with a strong interest in robotics, control systems, and autonomous technologies...
           </p>
         </div>
       </div>
@@ -96,16 +76,8 @@
       <section class="fade-in">
         <h2>Education</h2>
         <ul>
-          <li>
-            <strong>University of Michigan, Ann Arbor</strong><br>
-            Master of Science in Mechanical Engineering (Concentration: Mechatronics), GPA: 3.95 / 4.00<br>
-            Aug 2023 – Present
-          </li>
-          <li>
-            <strong>Indian Institute of Technology, Kharagpur</strong><br>
-            Bachelor of Technology (Honours) in Mechanical Engineering, CGPA: 8.65 / 10<br>
-            Aug 2019 – Apr 2023
-          </li>
+          <li><strong>University of Michigan, Ann Arbor</strong><br>Master of Science in Mechanical Engineering...<br>Aug 2023 – Present</li>
+          <li><strong>Indian Institute of Technology, Kharagpur</strong><br>Bachelor of Technology (Honours)...<br>Aug 2019 – Apr 2023</li>
         </ul>
       </section>
     </main>
@@ -113,7 +85,6 @@
     <footer>
       <p>&copy; 2025 Jayaprakash Harshavardhan</p>
     </footer>
-
   </div>
 </body>
 </html>
