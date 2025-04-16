@@ -1,34 +1,21 @@
-/* === Base Reset === */
-* {
+/* === Global Layout === */
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* === Full-height Flex Layout === */
-  html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-  }
-  
-  /* Main content grows to fill space */
-  main {
-    flex: 1;
-    padding: 2rem 1rem;
-    max-width: 900px;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
   }
   
   /* === Header === */
   header {
     background: #005f73;
-    color: white;
-    text-align: center;
+    color: #fff;
     padding: 2rem 1rem;
+    text-align: center;
   }
   
   header h1 {
@@ -40,7 +27,7 @@
   }
   
   nav a {
-    color: white;
+    color: #fff;
     margin: 0 1rem;
     text-decoration: none;
     font-weight: bold;
@@ -50,13 +37,34 @@
     text-decoration: underline;
   }
   
+  /* === Main Content === */
+  main {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  h2 {
+    color: #005f73;
+    margin-top: 0;
+  }
+  
   /* === Footer === */
   footer {
-    background-color: #003845;
-    color: white;
     text-align: center;
     padding: 1rem;
-    margin-top: auto; /* this keeps it pushed to the bottom */
+    background: #003845;
+    color: #fff;
+  }
+  
+  /* === Lists === */
+  ul {
+    padding-left: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
   }
   
   /* === Animations === */
@@ -71,21 +79,7 @@
     transform: translateY(0);
   }
   
-  /* === Typography & Layout === */
-  h2 {
-    color: #005f73;
-    margin-bottom: 1rem;
-  }
-  
-  ul {
-    padding-left: 1.5rem;
-  }
-  
-  li {
-    margin-bottom: 0.5rem;
-  }
-  
-  /* === Responsive Nav === */
+  /* === Responsive === */
   @media screen and (max-width: 600px) {
     nav a {
       display: inline-block;
