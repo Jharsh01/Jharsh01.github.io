@@ -66,23 +66,19 @@ h2 {
     flex-wrap: wrap;
 }
 
-
-/* Using flex order to put text on the left and image on the right */
-.about-container p {
-    order: 1;
-    flex: 1; /* Ensures text takes available space on the left */
-}
-
 .about-image .profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
-    max-width: 700px;
+    max-width: 600px;
+    text-align: left;
 }
+
 
 /* === Footer === */
 footer {
