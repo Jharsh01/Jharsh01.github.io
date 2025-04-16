@@ -9,7 +9,20 @@ html, body {
     display: flex;
     flex-direction: column;
   }
+  .about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
   
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #005f73;
+  }
   /* === Header === */
   header {
     background: #005f73;
