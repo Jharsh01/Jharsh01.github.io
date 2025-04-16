@@ -14,6 +14,12 @@ html, body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
 
 /* Header */
 header {
@@ -66,10 +72,14 @@ nav {
 
 /* Main */
 main {
-  padding: 3rem 1rem;
-  max-width: 1000px;
-  margin: auto;
-}
+    flex: 1;
+    padding: 3rem 1rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+
+  
 
 .btn-glow {
     padding: 0.5rem 1rem;
@@ -168,13 +178,14 @@ li strong {
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  background-color: #112240;
-  color: #8892b0;
-  font-size: 0.9rem;
-  border-top: 1px solid #233554;
-}
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #112240;
+    color: #8892b0;
+    font-size: 0.9rem;
+    border-top: 1px solid #233554;
+    margin-top: auto;
+  }
 
 /* Fade-in Animation */
 .fade-in {
