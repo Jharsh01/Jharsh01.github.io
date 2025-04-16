@@ -57,12 +57,11 @@ h2 {
 /* === About Section: Side-by-Side Layout === */
 .about-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 40px;
     padding: 40px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* prevent wrapping on large screens */
   }
   
   .profile-pic {
@@ -75,7 +74,8 @@ h2 {
   }
   
   .about-text {
-    max-width: 600px;
+    flex: 1;
+    min-width: 0;
     text-align: left;
   }
   
