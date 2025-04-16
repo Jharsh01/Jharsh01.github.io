@@ -293,6 +293,27 @@ footer {
     margin-top: 20px;
   }
   
+  .site-logo {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    display: inline-block;
+    z-index: 999;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .site-logo img {
+    width: 42px;
+    height: 42px;
+    display: block;
+    filter: drop-shadow(0 0 5px rgba(100, 255, 218, 0.4));
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+  
+  .site-logo:hover img {
+    transform: scale(1.1) rotate(5deg);
+    filter: drop-shadow(0 0 10px rgba(100, 255, 218, 0.8));
+  }
   
 /* === Animation Helpers === */
 .fade-in {
