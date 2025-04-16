@@ -36,22 +36,33 @@ header p {
 }
 
 nav {
-  margin-top: 1rem;
-}
-
-nav a {
-  color: #64ffda;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: 0.3s ease;
-}
-
-nav a:hover {
-  color: #ffffff;
-  text-shadow: 0 0 6px #64ffda;
-}
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links a {
+    color: #64ffda;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 6px #64ffda;
+  }
+  
 
 /* Main */
 main {
@@ -60,6 +71,24 @@ main {
   margin: auto;
 }
 
+.btn-glow {
+    padding: 0.5rem 1rem;
+    border: 1px solid #64ffda;
+    color: #64ffda;
+    border-radius: 4px;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  
+  .btn-glow:hover {
+    background-color: #64ffda;
+    color: #0a192f;
+    box-shadow: 0 0 10px #64ffda;
+  }
+  
 /* Section Headings */
 h2 {
   color: #64ffda;
