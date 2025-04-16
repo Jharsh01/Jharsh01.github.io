@@ -252,6 +252,7 @@ footer {
   border-top: 1px solid #233554;
   margin-top: auto;
 }
+
 .social-icons {
     position: fixed;
     left: 20px;
@@ -283,7 +284,6 @@ footer {
     transform: scale(1.2);
   }
   
-  /* Optional: vertical line below icons */
   .social-icons::after {
     content: "";
     display: block;
@@ -292,6 +292,7 @@ footer {
     background-color: #64ffda;
     margin-top: 20px;
   }
+  
   
 /* === Animation Helpers === */
 .fade-in {
