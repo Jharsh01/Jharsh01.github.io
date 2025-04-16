@@ -57,6 +57,7 @@ h2 {
 /* === About Section: Side-by-Side Layout === */
 .about-container {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 40px;
