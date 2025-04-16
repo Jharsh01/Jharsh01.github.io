@@ -15,11 +15,11 @@
   
   /* === Header === */
   header {
-    background: #121212;
-    color: #39ff14;
+    background: #0a192f;
+    color: #233554;
     padding: 2rem 1rem;
     text-align: center;
-    border-bottom: 2px solid #39ff14;
+    border-bottom: 2px solid #233554;
   }
   
   nav {
@@ -36,8 +36,8 @@
   }
   
   nav a:hover {
-    color: #ff3caa;
-    text-shadow: 0 0 15px #ff3caa;
+    color: #256072;
+    text-shadow: 0 0 15px #256072;
   }
   
   /* === Main Content === */
