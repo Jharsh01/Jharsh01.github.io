@@ -1,24 +1,21 @@
-/* === Base Layout === */
+/* === Base Reset === */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
   
+  /* === Full-height Flex Layout === */
   html, body {
-    margin: 0;
-    padding: 0;
     height: 100%;
+    display: flex;
+    flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
   }
   
-  /* Make body a flex column */
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Main content takes up remaining space */
+  /* Main content grows to fill space */
   main {
     flex: 1;
     padding: 2rem 1rem;
@@ -29,9 +26,9 @@
   /* === Header === */
   header {
     background: #005f73;
-    color: #fff;
-    padding: 2rem 1rem;
+    color: white;
     text-align: center;
+    padding: 2rem 1rem;
   }
   
   header h1 {
@@ -43,7 +40,7 @@
   }
   
   nav a {
-    color: #fff;
+    color: white;
     margin: 0 1rem;
     text-decoration: none;
     font-weight: bold;
@@ -55,23 +52,11 @@
   
   /* === Footer === */
   footer {
+    background-color: #003845;
+    color: white;
     text-align: center;
     padding: 1rem;
-    background: #003845;
-    color: #fff;
-  }
-  
-  /* === Content === */
-  h2 {
-    color: #005f73;
-  }
-  
-  ul {
-    padding-left: 1.5rem;
-  }
-  
-  li {
-    margin-bottom: 0.5rem;
+    margin-top: auto; /* this keeps it pushed to the bottom */
   }
   
   /* === Animations === */
@@ -86,7 +71,21 @@
     transform: translateY(0);
   }
   
-  /* === Responsive === */
+  /* === Typography & Layout === */
+  h2 {
+    color: #005f73;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    padding-left: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* === Responsive Nav === */
   @media screen and (max-width: 600px) {
     nav a {
       display: inline-block;
