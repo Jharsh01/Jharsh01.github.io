@@ -62,22 +62,24 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    padding: 20px;
+    padding: 40px;
     flex-wrap: wrap;
-}
-
-.about-image .profile-pic {
+  }
+  
+  .profile-pic {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.about-text {
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-text {
     max-width: 600px;
     text-align: left;
-}
+  }
+  
 
 
 /* === Footer === */
