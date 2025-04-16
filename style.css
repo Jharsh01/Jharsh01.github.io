@@ -1,13 +1,29 @@
-/* === Global Layout === */
-html, body {
-    height: 100%;
+/* === Base Layout === */
+* {
+    box-sizing: border-box;
+  }
+  
+  html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
     color: #333;
+  }
+  
+  /* Make body a flex column */
+  body {
     display: flex;
     flex-direction: column;
+  }
+  
+  /* Main content takes up remaining space */
+  main {
+    flex: 1;
+    padding: 2rem 1rem;
+    max-width: 900px;
+    margin: auto;
   }
   
   /* === Header === */
@@ -37,19 +53,6 @@ html, body {
     text-decoration: underline;
   }
   
-  /* === Main Content === */
-  main {
-    flex: 1;
-    padding: 2rem 1rem;
-    max-width: 900px;
-    margin: auto;
-  }
-  
-  h2 {
-    color: #005f73;
-    margin-top: 0;
-  }
-  
   /* === Footer === */
   footer {
     text-align: center;
@@ -58,7 +61,11 @@ html, body {
     color: #fff;
   }
   
-  /* === Lists === */
+  /* === Content === */
+  h2 {
+    color: #005f73;
+  }
+  
   ul {
     padding-left: 1.5rem;
   }
