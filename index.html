@@ -4,6 +4,28 @@
   <meta charset="UTF-8" />
   <title>About | Jayaprakash Harshavardhan</title>
   <link rel="stylesheet" href="style.css" />
+  <script>
+    // Simple fade-in on scroll animation trigger
+    document.addEventListener('DOMContentLoaded', function () {
+      const faders = document.querySelectorAll('.fade-in');
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
 </head>
 <body>
   <header>
@@ -17,20 +39,40 @@
       <a href="contact.html">Contact</a>
     </nav>
   </header>
+
   <main>
     <h2>About Me</h2>
-    <div class="about-container">
-        <div class="about-image">
-            <img src="images/professional_photo.jpg" alt="Jayaprakash Harshavardhan" class="profile-pic" />
-        </div>
-        <div class="about-text">
-            <p>
-                I'm a Mechanical Engineering graduate with a strong interest in robotics, control systems, and autonomous technologies. Through hands-on internships and academic projects, I've gained experience working with embedded systems, mechatronics, and software tools like ROS2, Simulink, and Python. I enjoy solving complex problems by combining mechanical principles with software development. My background includes work on autonomous robots, vehicle dynamics, and real-time control systems. I'm always eager to learn, collaborate, and take on challenging projects that push the boundaries of innovation in engineering and technology.
-            </p>
-        </div>
+    <div class="about-container fade-in">
+      <div class="about-image">
+        <img src="images/professional_photo.jpg" alt="Jayaprakash Harshavardhan" class="profile-pic" />
+      </div>
+      <div class="about-text">
+        <p>
+          I'm a Mechanical Engineering graduate with a strong interest in robotics, control systems, and autonomous technologies. Through hands-on internships and academic projects, I've gained experience working with embedded systems, mechatronics, and software tools like ROS2, Simulink, and Python. I enjoy solving complex problems by combining mechanical principles with software development. My background includes work on autonomous robots, vehicle dynamics, and real-time control systems. I'm always eager to learn, collaborate, and take on challenging projects that push the boundaries of innovation in engineering and technology.
+        </p>
+      </div>
     </div>
+
+    <!-- Education Section -->
+    <section class="fade-in">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <strong>University of Michigan, Ann Arbor</strong><br>
+          Master of Science in Mechanical Engineering (Concentration: Mechatronics), GPA: 3.95 / 4.00<br>
+          Aug 2023 – Present
+        </li>
+        <li>
+          <strong>Indian Institute of Technology, Kharagpur</strong><br>
+          Bachelor of Technology (Honours) in Mechanical Engineering, CGPA: 8.65 / 10<br>
+          Aug 2019 – Apr 2023
+        </li>
+      </ul>
+    </section>
   </main>
-  <footer><p>&copy; 2025 Jayaprakash Harshavardhan</p></footer>
+
+  <footer>
+    <p>&copy; 2025 Jayaprakash Harshavardhan</p>
+  </footer>
 </body>
 </html>
-
