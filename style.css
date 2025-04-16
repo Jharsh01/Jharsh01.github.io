@@ -292,6 +292,22 @@ footer {
     background-color: #64ffda;
     margin-top: 20px;
   }
+  .octagon-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    clip-path: polygon(
+      30% 0%, 70% 0%,
+      100% 30%, 100% 70%,
+      70% 100%, 30% 100%,
+      0% 70%, 0% 30%
+    );
+    transition: transform 0.3s ease;
+  }
+  
+  .octagon-img:hover {
+    transform: scale(1.05) rotate(2deg);
+  }
   
   .site-logo {
     position: absolute;
