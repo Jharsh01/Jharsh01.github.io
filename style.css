@@ -9,20 +9,22 @@ html, body {
     display: flex;
     flex-direction: column;
   }
-  .about-container {
+.about-container {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
     flex-wrap: wrap;
-  }
-  
-  .profile-pic {
-    width: 150px;
-    height: 150px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #005f73;
-  }
+    order: 2; /* Moves the photo to the right in the flex container */
+}
+  
   /* === Header === */
   header {
     background: #005f73;
