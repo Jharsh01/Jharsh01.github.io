@@ -12,8 +12,9 @@ html, body {
 .about-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end; /* Aligns content to the right */
     flex-wrap: wrap;
+    gap: 1rem; /* Adds spacing between elements */
 }
 
 .profile-pic {
@@ -22,7 +23,7 @@ html, body {
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid #005f73;
-    order: 2; /* Moves the photo to the right in the flex container */
+    margin-left: 1rem; /* Adds spacing between the photo and the text */
 }
   
   /* === Header === */
