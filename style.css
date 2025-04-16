@@ -252,7 +252,47 @@ footer {
   border-top: 1px solid #233554;
   margin-top: auto;
 }
-
+.social-icons {
+    position: fixed;
+    left: 20px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .social-icons ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .social-icons li {
+    margin: 12px 0;
+  }
+  
+  .social-icons a {
+    color: #64ffda;
+    font-size: 1.25rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #ffffff;
+    transform: scale(1.2);
+  }
+  
+  /* Optional: vertical line below icons */
+  .social-icons::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    background-color: #64ffda;
+    margin-top: 20px;
+  }
+  
 /* === Animation Helpers === */
 .fade-in {
   opacity: 0;
