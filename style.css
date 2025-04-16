@@ -3,65 +3,68 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html, body {
+  }
+  
+  html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* === Header === */
-header {
-    background: #005f73;
-    color: #fff;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+  
+  /* === Header === */
+  header {
+    background: #121212;
+    color: #39ff14;
     padding: 2rem 1rem;
     text-align: center;
-}
-
-header h1 {
-    margin-bottom: 0.5rem;
-}
-
-nav {
+    border-bottom: 2px solid #39ff14;
+  }
+  
+  nav {
     margin-top: 1rem;
-}
-
-nav a {
-    color: #fff;
+  }
+  
+  nav a {
+    color: #00ffe1;
     margin: 0 1rem;
     text-decoration: none;
     font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* === Main Content === */
-main {
+    text-shadow: 0 0 10px #00ffe1;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ff3caa;
+    text-shadow: 0 0 15px #ff3caa;
+  }
+  
+  /* === Main Content === */
+  main {
     flex: 1;
     padding: 2rem 1rem;
     max-width: 900px;
     margin: auto;
-}
-
-h2 {
-    color: #005f73;
-    margin-top: 0;
-}
-
-/* === About Section: Side-by-Side Layout === */
-.about-container {
+  }
+  
+  h2 {
+    color: #00ffe1;
+    text-shadow: 0 0 8px #00ffe1;
+    margin-bottom: 1rem;
+  }
+  
+  /* === About Section: Side-by-Side Layout === */
+  .about-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
     padding: 40px;
-    flex-wrap: nowrap; /* prevent wrapping on large screens */
+    flex-wrap: wrap;
+    background: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #39ff14;
   }
   
   .profile-pic {
@@ -70,7 +73,7 @@ h2 {
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px #39ff14;
   }
   
   .about-text {
@@ -79,55 +82,54 @@ h2 {
     text-align: left;
   }
   
-
-
-/* === Footer === */
-footer {
+  /* === Footer === */
+  footer {
     text-align: center;
     padding: 1rem;
-    background: #003845;
-    color: #fff;
-    margin-top: auto; /* Keeps footer at bottom */
-}
-
-/* === Lists === */
-ul {
+    background: #1a1a1a;
+    color: #39ff14;
+    border-top: 1px solid #39ff14;
+  }
+  
+  /* === Lists === */
+  ul {
     padding-left: 1.5rem;
-}
-
-li {
+  }
+  
+  li {
     margin-bottom: 0.5rem;
-}
-
-/* === Animations === */
-.fade-in {
+  }
+  
+  /* === Animations === */
+  .fade-in {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.visible {
+  }
+  
+  .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* === Responsive === */
-@media screen and (max-width: 600px) {
+  }
+  
+  /* === Responsive === */
+  @media screen and (max-width: 600px) {
     nav a {
-        display: inline-block;
-        margin: 0.5rem 0.75rem;
+      display: inline-block;
+      margin: 0.5rem 0.75rem;
     }
-
+  
     header, main {
-        padding: 1.5rem 1rem;
+      padding: 1.5rem 1rem;
     }
-    
+  
     .about-container {
-        flex-direction: column; /* Stacks the text and photo vertically on small screens */
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-    
+  
     .profile-pic {
-        margin-top: 1rem;
+      margin-top: 1rem;
     }
-}
+  }
+  
