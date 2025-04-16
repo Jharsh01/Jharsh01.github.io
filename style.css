@@ -1,176 +1,199 @@
-/* === Global Reset & Typography === */
+/* === Import Font === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* === Reset & Base === */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-    font-family: 'Inter', sans-serif;
-    background-color: #0a192f;
-    color: #ccd6f6;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
-  
-  /* === Header === */
-  header {
-    background-color: #0a192f;
-    color: #64ffda;
-    text-align: center;
-    padding: 2rem 1rem 1rem;
-    border-bottom: 1px solid #233554;
-  }
-  
-  header h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-  }
-  
-  header p {
-    font-size: 1rem;
-    color: #8892b0;
-    margin-top: 0.25rem;
-  }
-  
-  nav {
-    margin-top: 1.5rem;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #0a192f;
+  color: #ccd6f6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* === Header === */
+header {
+  background-color: #0a192f;
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+  border-bottom: 1px solid #233554;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ccd6f6;
+}
+
+header p {
+  font-size: 1rem;
+  color: #8892b0;
+  margin-top: 0.25rem;
+}
+
+/* === Navigation === */
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #64ffda;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 6px #64ffda;
+}
+
+/* === Main Container === */
+main {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* === Section Headers === */
+h2 {
+  color: #64ffda;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+h2::before {
+  content: "01.";
+  color: #64ffda;
+  font-weight: 400;
+  margin-right: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+}
+
+/* === About Section === */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+  background-color: #112240;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(2, 12, 27, 0.5);
+  transition: background 0.3s ease;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+  color: #ccd6f6;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #64ffda;
+  transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.03);
+}
+
+/* === Button Styling === */
+.btn-glow {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #64ffda;
+  color: #64ffda;
+  border-radius: 6px;
+  background-color: transparent;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.btn-glow:hover {
+  background-color: #64ffda;
+  color: #0a192f;
+  box-shadow: 0 0 12px #64ffda;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: #112240;
+  color: #64ffda;
+  font-size: 0.9rem;
+  border-top: 1px solid #233554;
+}
+
+/* === Lists === */
+ul {
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* === Animation Helpers === */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Responsive Layout === */
+@media screen and (max-width: 768px) {
   nav a {
-    color: #64ffda;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px #64ffda;
-  }
-  
-  /* === Main === */
-  main {
-    padding: 3rem 1rem;
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  h2 {
-    color: #64ffda;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-    font-weight: 600;
-    text-shadow: 0 0 8px #64ffda;
-  }
-  
-  /* === About Section === */
-  .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 40px;
-    background-color: #112240;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
-    flex-wrap: wrap;
-  }
-  
-  .profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    box-shadow: 0 0 20px #64ffda;
-  }
-  
-  .about-text {
-    flex: 1;
-    min-width: 280px;
-    color: #ccd6f6;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  /* === Button === */
-  .btn-glow {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid #64ffda;
-    color: #64ffda;
-    border-radius: 6px;
-    background-color: transparent;
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: 1.5rem;
-    transition: 0.3s ease;
-    box-shadow: 0 0 10px #64ffda;
+    margin: 0.5rem 0.75rem;
   }
-  
-  .btn-glow:hover {
-    background-color: #64ffda;
-    color: #0a192f;
-    box-shadow: 0 0 20px #64ffda;
-  }
-  
-  /* === Footer === */
-  footer {
-    text-align: center;
+
+  header, main {
     padding: 1.5rem 1rem;
-    background-color: #112240;
-    color: #64ffda;
-    font-size: 0.9rem;
-    border-top: 1px solid #233554;
   }
-  
-  /* === Animations === */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+  .about-container {
+    flex-direction: column;
+    text-align: center;
   }
-  
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+
+  .about-text {
+    text-align: center;
   }
-  
-  /* === Lists === */
-  ul {
-    padding-left: 1.5rem;
+
+  .profile-pic {
+    margin-bottom: 1rem;
   }
-  
-  li {
-    margin-bottom: 0.5rem;
+
+  h2::before {
+    content: "";
   }
-  
-  /* === Responsive === */
-  @media screen and (max-width: 768px) {
-    nav a {
-      display: inline-block;
-      margin: 0.5rem 0.75rem;
-    }
-  
-    header, main {
-      padding: 1.5rem 1rem;
-    }
-  
-    .about-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-text {
-      text-align: center;
-    }
-  
-    .profile-pic {
-      margin-top: 1rem;
-    }
-  }
-  
+}
