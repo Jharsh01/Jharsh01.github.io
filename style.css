@@ -184,32 +184,55 @@ main {
 }
 
 /* === Education Section === */
+/* === Education Section === */
+.education-section {
+  padding: 2rem 1rem;
+}
+
 .education-entry {
   background: #112240;
   padding: 1.5rem;
   margin: 1.5rem 0;
   border-left: 4px solid #64ffda;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.15);
   transition: all 0.3s ease;
 }
 
 .education-entry:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.25);
 }
 
 .education-entry h3 {
   color: #64ffda;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   font-size: 1.2rem;
 }
 
 .education-entry p {
-  line-height: 1.6;
+  font-size: 0.95rem;
   color: #8892b0;
+  margin-bottom: 0.75rem;
+}
+
+.education-entry ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  color: #ccd6f6;
+}
+
+.education-entry li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
   font-size: 0.95rem;
 }
+
+.date-range {
+  font-size: 0.85rem;
+  color: #a8b2d1;
+}
+
 
 .date-range {
   display: inline-block;
