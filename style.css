@@ -200,10 +200,11 @@ main {
   flex-wrap: wrap;
 }
 
-.education-entry:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+.edu-logo img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
 }
+
 
 
 .education-section {
@@ -253,14 +254,22 @@ main {
   flex: 1;
   min-width: 250px;
 }
+.edu-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .edu-logo img {
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 110px;
+  max-height: 110px;
   border-radius: 10px;
   background-color: #fff;
   padding: 6px;
+  box-shadow: 0 0 8px rgba(100, 255, 218, 0.15);
 }
+
 
 .about-text {
   flex: 1;
