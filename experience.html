@@ -31,7 +31,7 @@
           <div class="nav-links">
             <a href="index.html">About</a>
             <a href="projects.html">Projects</a>
-            <a href="experience.html">Experience</a>
+            <a href="experience.html" class="active">Experience</a>
             <a href="contact.html">Contact</a>
           </div>
           <a href="resume.pdf" target="_blank" class="btn-glow">Resume</a>
@@ -39,38 +39,41 @@
       </div>
     </header>
 
-    <main class="experience">
-      <h2>Professional Experience</h2>
+    <main class="fade-in">
+      <h2 style="text-align: center; color: #64ffda;">Professional Experience</h2>
+      <div class="experience-grid">
 
-      <div class="job-card">
-        <h3>Controls Intern - Magna International (New Mobility Division)</h3>
-        <p><strong>May 2024 - Mar 2025 | Troy, United States</strong></p>
-        <ul>
-          <li>Developed OTA update architecture for containerized bots using a cloud-managed FMS.</li>
-          <li>Designed data/video logging pipeline deployed as a Blackbox system.</li>
-          <li>Created ROS2 packages to convert CAN signals to custom messages.</li>
-          <li>Configured modems, routing, and static IPs; updated teleoperation APIs.</li>
-          <li>Integrated corrected GNSS data over SPI with RTCM messages via ROS.</li>
-        </ul>
-      </div>
+        <div class="experience-box">
+          <h3>Controls Intern — Magna International</h3>
+          <p class="location"><strong>May 2024 - Mar 2025 | Troy, United States</strong></p>
+          <ul>
+            <li>Developed OTA update architecture for containerized bots using a cloud-managed FMS.</li>
+            <li>Designed data/video logging pipeline deployed as a Blackbox system.</li>
+            <li>Created ROS2 packages to convert CAN signals to custom messages.</li>
+            <li>Configured modems, routing, and static IPs; updated teleoperation APIs.</li>
+            <li>Integrated corrected GNSS data over SPI with RTCM messages via ROS.</li>
+          </ul>
+        </div>
 
-      <div class="job-card">
-        <h3>Graduate Researcher - LATTICE (Airport Airside Project)</h3>
-        <p><strong>Jan 2024 - Apr 2024 | Ann Arbor, United States</strong></p>
-        <ul>
-          <li>Modeled LAX as a weighted graph to simulate multi-agent pathfinding.</li>
-          <li>Implemented CBS with A* and conflict tree for realistic airport routing.</li>
-          <li>Incorporated time and path constraints for real-world simulation fidelity.</li>
-        </ul>
-      </div>
+        <div class="experience-box">
+          <h3>Graduate Researcher — LATTICE (Airport Airside Project)</h3>
+          <p class="location"><strong>Jan 2024 - Apr 2024 | Ann Arbor, United States</strong></p>
+          <ul>
+            <li>Modeled LAX as a weighted graph to simulate multi-agent pathfinding.</li>
+            <li>Implemented CBS with A* and conflict tree for realistic airport routing.</li>
+            <li>Incorporated time and path constraints for real-world simulation fidelity.</li>
+          </ul>
+        </div>
 
-      <div class="job-card">
-        <h3>Mechatronics Intern - Kanan Park (Electrical Division)</h3>
-        <p><strong>Jun 2023 - Jul 2023 | Pune, India</strong></p>
-        <ul>
-          <li>Programmed autonomous differential drive vehicle to follow lane paths.</li>
-          <li>Enabled mobile Wi-Fi control via Flask as a manual override system.</li>
-        </ul>
+        <div class="experience-box">
+          <h3>Mechatronics Intern — Kanan Park</h3>
+          <p class="location"><strong>Jun 2023 - Jul 2023 | Pune, India</strong></p>
+          <ul>
+            <li>Programmed autonomous differential drive vehicle to follow lane paths.</li>
+            <li>Enabled mobile Wi-Fi control via Flask as a manual override system.</li>
+          </ul>
+        </div>
+
       </div>
     </main>
 
@@ -78,5 +81,28 @@
       <p>&copy; 2025 Jayaprakash Harshavardhan</p>
     </footer>
   </div>
+
+  <!-- Fade-in Animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const faders = document.querySelectorAll('.fade-in');
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
 </body>
 </html>

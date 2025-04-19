@@ -330,6 +330,49 @@ main {
   color: #ffffff;
   text-shadow: 0 0 6px #64ffda;
 }
+/* === Experience Section === */
+.experience-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.experience-box {
+  background-color: #112240;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.12);
+  border-left: 4px solid #64ffda;
+  transition: all 0.3s ease-in-out;
+}
+
+.experience-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(100, 255, 218, 0.2);
+}
+
+.experience-box h3 {
+  color: #64ffda;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience-box .location {
+  font-size: 0.9rem;
+  color: #a8b2d1;
+  margin-bottom: 1rem;
+}
+
+.experience-box ul {
+  padding-left: 1.25rem;
+  color: #ccd6f6;
+}
+
+.experience-box li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
 
 
 /* === Footer === */
