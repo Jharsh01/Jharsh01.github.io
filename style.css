@@ -414,6 +414,29 @@ footer {
   font-style: italic;
 }
 */
+.github-link {
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.github-link a {
+  color: #64ffda;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.4rem;
+}
+
+.github-link a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 6px #64ffda;
+}
+
+.github-link i {
+  color: #64ffda;
+}
+
 .media-preview {
   width: 100%;
   max-width: 100%;
