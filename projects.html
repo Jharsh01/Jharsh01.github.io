@@ -30,7 +30,7 @@
         <nav class="nav-right">
           <div class="nav-links">
             <a href="index.html">About</a>
-            <a href="projects.html">Projects</a>
+            <a href="projects.html" class="active">Projects</a>
             <a href="experience.html">Experience</a>
             <a href="contact.html">Contact</a>
           </div>
@@ -39,18 +39,119 @@
       </div>
     </header>
 
-    <main>
-      <h2>Featured Projects</h2>
-      <ul>
-        <li><strong>BotLab</strong> - Built a full SLAM system and A* planner for a differential drive robot.</li>
-        <li><strong>Autonomous Robotic Arm</strong> - Block detection and manipulation with a 5-DoF arm using ROS2.</li>
-        <li><strong>Model Predictive Control</strong> - Simulated overtaking maneuvers, ACC, and drone navigation with MPC.</li>
-      </ul>
+    <main class="fade-in">
+      <h2 style="text-align: center; color: #64ffda;">Academic Projects</h2>
+      <div class="experience-grid">
+
+        <div class="experience-box">
+          <h3>Embedded Controls Lab – ACC & CAN Simulation</h3>
+          <p class="location"><strong>Sept 2024 – Dec 2024</strong></p>
+          <ul>
+            <li>Designed Adaptive Cruise Control (ACC) using Simulink and NXP S32K144 board.</li>
+            <li>Tested multi-car simulation using CAN bus and virtual driver inputs.</li>
+          </ul>
+          <div class="skill-tags">
+            <span>C</span>
+            <span>MATLAB</span>
+            <span>Simulink</span>
+            <span>NXP Design Studio</span>
+            <span>CAN</span>
+          </div>
+        </div>
+
+        <div class="experience-box">
+          <h3>BotLab – A* Path Planning and SLAM</h3>
+          <p class="location"><strong>Mar 2024 – May 2024</strong></p>
+          <ul>
+            <li>Implemented A* planner and cascaded PID control for a differential drive robot.</li>
+            <li>Built a full SLAM pipeline using LiDAR, Monte Carlo Localization, and LCM.</li>
+          </ul>
+          <div class="skill-tags">
+            <span>Python</span>
+            <span>C++</span>
+            <span>LCM</span>
+            <span>Jetson Nano</span>
+            <span>OpenCV</span>
+          </div>
+        </div>
+
+        <div class="experience-box">
+          <h3>Autonomous Robotic Arm – Armlab</h3>
+          <p class="location"><strong>Jan 2024 – Mar 2024</strong></p>
+          <ul>
+            <li>Developed ROS2 stack for block stacking on ReactorX200 (5-DoF) robot.</li>
+            <li>Implemented visual detection with Realsense 435i for object localization.</li>
+          </ul>
+          <div class="skill-tags">
+            <span>Python</span>
+            <span>ROS2</span>
+            <span>OpenCV</span>
+            <span>Git</span>
+            <span>Intel RealSense</span>
+          </div>
+        </div>
+
+        <div class="experience-box">
+          <h3>Model Predictive Control Projects</h3>
+          <p class="location"><strong>Oct 2023 – Apr 2024</strong></p>
+          <ul>
+            <li>Designed non-linear MPC for vehicle overtaking and trajectory planning using CasADi.</li>
+            <li>Simulated ACC in Simulink and quadcopter navigation with probabilistic MPC in MATLAB.</li>
+          </ul>
+          <div class="skill-tags">
+            <span>Python</span>
+            <span>MATLAB</span>
+            <span>Simulink</span>
+            <span>CasADi</span>
+            <span>Control Systems</span>
+          </div>
+        </div>
+
+        <div class="experience-box">
+          <h3>TeamKART – FSAE Formula Bharat</h3>
+          <p class="location"><strong>Mar 2020 – May 2022</strong></p>
+          <ul>
+            <li>Led aerodynamic design and CFD simulation for front wing and diffuser systems.</li>
+            <li>Designed nose cone and coached new members in simulation and CAD practices.</li>
+          </ul>
+          <div class="skill-tags">
+            <span>SolidWorks</span>
+            <span>CFD</span>
+            <span>Aerodynamics</span>
+            <span>Simulation</span>
+            <span>Team Leadership</span>
+          </div>
+        </div>
+
+      </div>
     </main>
 
     <footer>
       <p>&copy; 2025 Jayaprakash Harshavardhan</p>
     </footer>
   </div>
+
+  <!-- Fade-in Animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const faders = document.querySelectorAll('.fade-in');
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+      });
+    });
+  </script>
 </body>
 </html>

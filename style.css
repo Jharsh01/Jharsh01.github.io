@@ -265,6 +265,28 @@ main {
   min-width: 250px;
 }
 
+.skill-tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tags span {
+  background-color: #0f2a44;
+  border: 1px solid #64ffda;
+  color: #64ffda;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-tags span:hover {
+  background-color: #64ffda;
+  color: #0a192f;
+}
 
 .about-text {
   flex: 1;
