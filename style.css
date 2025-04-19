@@ -185,23 +185,29 @@ main {
 
 /* === Education Section === */
 /* === Education Section === */
-.education-section {
-  padding: 2rem 1rem;
-}
-
 .education-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: #112240;
   padding: 1.5rem;
   margin: 1.5rem 0;
   border-left: 4px solid #64ffda;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(100, 255, 218, 0.15);
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.2);
   transition: all 0.3s ease;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .education-entry:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 15px rgba(100, 255, 218, 0.25);
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+}
+
+
+.education-section {
+  padding: 2rem 1rem;
 }
 
 .education-entry h3 {
@@ -241,6 +247,20 @@ main {
   color: #ccd6f6;
 }
 
+
+
+.edu-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.edu-logo img {
+  max-width: 80px;
+  max-height: 80px;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 6px;
+}
 
 .about-text {
   flex: 1;
