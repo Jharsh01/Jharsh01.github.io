@@ -199,12 +199,19 @@ main {
   gap: 2rem;
   flex-wrap: wrap;
 }
-
-.edu-logo img:hover {
-  transform: scale(1.05);
-  transition: 0.3s ease;
+.edu-logo img {
+  max-width: 140px;
+  max-height: 140px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  padding: 8px;
+  box-shadow: 0 0 12px rgba(100, 255, 218, 0.15);
+  transition: transform 0.3s ease;
 }
 
+.edu-logo img:hover {
+  transform: scale(1.06);
+}
 
 
 .education-section {
@@ -253,21 +260,6 @@ main {
 .edu-text {
   flex: 1;
   min-width: 250px;
-}
-.edu-logo {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.edu-logo img {
-  max-width: 110px;
-  max-height: 110px;
-  border-radius: 10px;
-  background-color: #fff;
-  padding: 6px;
-  box-shadow: 0 0 8px rgba(100, 255, 218, 0.15);
 }
 
 
