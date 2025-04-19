@@ -282,34 +282,53 @@ main {
   text-align: center;
 }
 
-.contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+
+/* === Contact Boxes === */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-.contact-list li {
-  font-size: 1rem;
-  color: #ccd6f6;
-  margin-bottom: 1.2rem;
+.contact-box {
+  background-color: #0f2a44;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.12);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  border: 1px solid rgba(100, 255, 218, 0.2);
 }
 
-.contact-list strong {
+.contact-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.25);
+}
+
+.contact-box i {
+  font-size: 1.8rem;
   color: #64ffda;
-  margin-right: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
-.contact-list a {
+.contact-box h3 {
+  font-size: 1.1rem;
+  color: #ccd6f6;
+  margin-bottom: 0.5rem;
+}
+
+.contact-box a,
+.contact-box p {
   color: #8892b0;
+  font-size: 0.95rem;
   text-decoration: none;
-  border-bottom: 1px dashed #64ffda;
-  transition: 0.3s ease;
+  word-break: break-word;
 }
 
-.contact-list a:hover {
+.contact-box a:hover {
   color: #ffffff;
   text-shadow: 0 0 6px #64ffda;
-  border-bottom: 1px solid #64ffda;
 }
 
 
