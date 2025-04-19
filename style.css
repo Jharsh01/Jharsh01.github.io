@@ -200,14 +200,17 @@ main {
   flex-wrap: wrap;
 }
 .edu-logo img {
-  max-width: 140px;
-  max-height: 140px;
+  width: 140px;               /* force width */
+  height: 140px;              /* force height */
+  object-fit: contain;        /* prevents distortion */
+  image-rendering: auto;      /* smooth scaling */
   border-radius: 12px;
   background-color: #ffffff;
   padding: 8px;
   box-shadow: 0 0 12px rgba(100, 255, 218, 0.15);
   transition: transform 0.3s ease;
 }
+
 
 .edu-logo img:hover {
   transform: scale(1.06);
