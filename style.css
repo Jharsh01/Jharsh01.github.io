@@ -262,6 +262,56 @@ main {
   transform: scale(1.03);
 }
 
+/* === Contact Section === */
+.contact-section {
+  padding: 3rem 2rem;
+  background-color: #112240;
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.15);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-section h2 {
+  font-size: 1.5rem;
+  color: #64ffda;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  font-size: 1rem;
+  color: #ccd6f6;
+  margin-bottom: 1.2rem;
+}
+
+.contact-list strong {
+  color: #64ffda;
+  margin-right: 0.5rem;
+}
+
+.contact-list a {
+  color: #8892b0;
+  text-decoration: none;
+  border-bottom: 1px dashed #64ffda;
+  transition: 0.3s ease;
+}
+
+.contact-list a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 6px #64ffda;
+  border-bottom: 1px solid #64ffda;
+}
+
+
 /* === Footer === */
 footer {
   text-align: center;
