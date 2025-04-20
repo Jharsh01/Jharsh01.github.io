@@ -89,10 +89,20 @@ main {
   text-shadow: 0 0 6px #64ffda;
 }
 
+/* Fix for side panel nav links spacing */
+.side-panel a {
+  padding: 14px 24px;         /* more vertical and horizontal padding */
+  text-align: left;           /* align text left */
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* optional divider */
+}
+
+/* Space between name and hamburger */
 .hamburger {
-  display: none;
-  font-size: 1.6rem;
-  color: #64ffda;
+  margin-left: auto;         /* push it to the far right */
+  margin-right: 16px;
+  font-size: 24px;
+  color: #3ff0c5;
   cursor: pointer;
 }
 
@@ -562,10 +572,7 @@ footer {
   width: 250px;
 }
 
-.side-panel a {
-  padding: 8px 0;
-  font-size: 1.1rem;
-}
+
 
 .closebtn {
   position: absolute;
@@ -648,7 +655,23 @@ a:hover {
     display: none;
   }
 }
+@media screen and (max-width: 768px) {
+  .header-main {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+  }
 
+  .title-block {
+    text-align: left;
+    flex-grow: 1;
+  }
+
+  .hamburger {
+    margin-top: 0;
+  }
+}
 
 
 
