@@ -541,19 +541,7 @@ footer {
   text-shadow: 0 0 6px #64ffda;
 }
 /* Hide hamburger on desktop */
-a {
-  color: #64ffda;
-  text-decoration: none;
-}
 
-a:visited {
-  color: #64ffda;
-}
-
-a:hover {
-  color: white;
-  text-shadow: 0 0 6px #64ffda;
-}
 .side-panel {
   height: 100%;
   width: 0;
@@ -586,65 +574,81 @@ a:hover {
   font-size: 2rem;
   cursor: pointer;
 }
-/* Mobile layout */
+/* === Global link reset === */
+a {
+  color: #64ffda;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #64ffda;
+}
+
+a:hover {
+  color: white;
+  text-shadow: 0 0 6px #64ffda;
+}
+
+/* === Hide desktop nav on mobile === */
 @media screen and (max-width: 768px) {
-  .header-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .site-logo {
-    order: 0;
-  }
-
-  .title-block {
-    order: 1;
-    flex: 1;
-    text-align: center;
+  .nav-links {
+    display: none !important;
   }
 
   .hamburger {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: #64ffda;
     cursor: pointer;
-    margin-left: 1rem;
+    margin-left: auto;
   }
 
-  .nav-right {
-    width: 100%;
-  }
-
-  .nav-links {
-    display: none;
+  .side-panel {
+    width: 0;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #0a192f;
+    overflow-x: hidden;
+    transition: 0.3s ease;
+    padding-top: 60px;
+    z-index: 1001;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  .nav-links {
-    display: none;
+    padding-left: 2rem;
   }
 
-  .nav-links.show {
-    display: flex;
+  .side-panel.open {
+    width: 250px;
   }
 
-  .btn-glow {
-    margin-top: 0.5rem;
+  .side-panel a {
+    padding: 10px 0;
+    font-size: 1.1rem;
   }
 
-  .hamburger {
-    display: block;
-  }
-
-  #sidePanel {
-    display: flex;
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 2rem;
+    color: #64ffda;
+    cursor: pointer;
   }
 }
+
+/* === Hide hamburger on desktop === */
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+
+  .side-panel {
+    display: none;
+  }
+}
+
 
 
 

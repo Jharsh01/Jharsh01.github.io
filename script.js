@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Fade-in animation
   const faders = document.querySelectorAll('.fade-in');
   if ('IntersectionObserver' in window) {
     const appearOnScroll = new IntersectionObserver((entries) => {
