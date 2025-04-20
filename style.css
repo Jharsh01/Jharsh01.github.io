@@ -71,6 +71,7 @@ main {
   margin-left: auto;
 }
 
+
 /* Nav Links */
 .nav-links {
   display: flex;
@@ -91,18 +92,19 @@ main {
   margin: 0;
 }
 
-/* Resume Button */
 .btn-glow {
-  padding: 6px 14px;
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 1rem;
+  line-height: 1.2;
+  color: #3ff0c5;
   border: 1px solid #3ff0c5;
   border-radius: 6px;
-  color: #3ff0c5;
   text-decoration: none;
-  font-size: 1rem;
-  line-height: 1;              /* Match line-height with links */
-  display: flex;
-  align-items: center;         /* Align icon/text vertically */
+  background: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 
 
