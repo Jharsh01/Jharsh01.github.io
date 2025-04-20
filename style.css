@@ -537,21 +537,26 @@ footer {
   color: #ffffff;
   text-shadow: 0 0 6px #64ffda;
 }
-/* Hamburger hidden on desktop */
+/* Hide hamburger on desktop */
 .hamburger {
   display: none;
 }
 
-/* Show it only on small screens */
+/* MOBILE VIEW (max-width: 768px) */
 @media screen and (max-width: 768px) {
+  .header-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .hamburger {
     display: block;
     font-size: 1.8rem;
     color: #64ffda;
     cursor: pointer;
     padding: 0.5rem;
-    width: 100%;
     text-align: right;
+    width: 100%;
   }
 
   .nav-links {
@@ -560,17 +565,14 @@ footer {
     gap: 1rem;
     align-items: center;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .nav-links.show {
     display: flex;
   }
-
-  .nav-links a.btn-glow {
-    margin-top: 0.5rem;
-  }
 }
+
 
 
 
