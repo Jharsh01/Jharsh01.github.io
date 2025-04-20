@@ -538,15 +538,24 @@ footer {
   text-shadow: 0 0 6px #64ffda;
 }
 /* Hide hamburger on desktop */
+/* Default: Hide hamburger */
 .hamburger {
   display: none;
 }
 
-/* MOBILE VIEW (max-width: 768px) */
+/* Mobile layout */
 @media screen and (max-width: 768px) {
   .header-main {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  .title-block {
+    text-align: center;
+    flex: 1;
   }
 
   .hamburger {
@@ -556,22 +565,30 @@ footer {
     cursor: pointer;
     padding: 0.5rem;
     text-align: right;
+  }
+
+  .nav-right {
     width: 100%;
   }
 
   .nav-links {
     display: none;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
     width: 100%;
-    margin-top: 0.5rem;
+    gap: 1rem;
+    margin-top: 1rem;
   }
 
   .nav-links.show {
     display: flex;
   }
+
+  .btn-glow {
+    margin-top: 0.5rem;
+  }
 }
+
 
 
 
