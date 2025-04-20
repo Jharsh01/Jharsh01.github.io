@@ -93,27 +93,27 @@ main {
 }
 .btn-glow {
   display: inline-block;
-  padding: 12px 24px;             /* larger internal spacing */
-  font-size: 1rem;                /* balanced text */
-  font-weight: 600;
+  padding: 12px 28px;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: #3ff0c5;
   border: 2px solid #3ff0c5;
-  border-radius: 12px;            /* rounder corners like earlier */
+  border-radius: 16px;
   text-decoration: none;
   background-color: transparent;
-  line-height: 1;
   transition: all 0.3s ease;
   box-sizing: border-box;
-  height: auto;                   /* allow natural height */
-  white-space: nowrap;           /* prevent text wrap */
+  white-space: nowrap;
+  line-height: 1.2;
 }
 
 .btn-glow:hover {
   background-color: #3ff0c5;
   color: #0a192f;
-  transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(63, 240, 197, 0.4);
+  box-shadow: 0 0 12px rgba(63, 240, 197, 0.4);
+  transform: translateY(-1px);
 }
+
 
 
 
