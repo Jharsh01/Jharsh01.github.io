@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.getElementById('nav-links');
   const sidePanel = document.getElementById('sidePanel');
+  const closeBtn = document.querySelector('.closebtn');
 
   if (hamburger && sidePanel) {
     hamburger.addEventListener('click', () => {
@@ -9,13 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Close side panel when a link is clicked
-  const sideLinks = sidePanel?.querySelectorAll('a');
-  sideLinks?.forEach(link => {
-    link.addEventListener('click', () => {
+  if (closeBtn && sidePanel) {
+    closeBtn.addEventListener('click', () => {
       sidePanel.classList.remove('open');
     });
-  });
+  }
 
   // Fade-in animation
   const faders = document.querySelectorAll('.fade-in');
@@ -26,13 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
           entry.target.classList.add('visible');
         }
       });
-    }, {
-      threshold: 0.1
-    });
+    }, { threshold: 0.1 });
 
-    faders.forEach(fader => {
-      appearOnScroll.observe(fader);
-    });
+    faders.forEach(fader => appearOnScroll.observe(fader));
   } else {
     faders.forEach(fader => fader.classList.add('visible'));
   }
