@@ -319,6 +319,35 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  color: #64ffda;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .btn-glow {
+    margin-top: 0.75rem;
+  }
+}
 
 
 .contact-section h2 {

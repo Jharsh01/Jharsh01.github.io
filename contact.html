@@ -28,14 +28,18 @@
           <p>Mechanical Engineer | Robotics & Controls Enthusiast</p>
         </div>
         <nav class="nav-right">
-          <div class="nav-links">
+          <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </div>
+          <div class="nav-links" id="nav-links">
             <a href="index.html">About</a>
             <a href="projects.html">Projects</a>
             <a href="experience.html">Experience</a>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="contact.html">Contact</a>
           </div>
           <a href="resume.pdf" target="_blank" class="btn-glow">Resume</a>
         </nav>
+        
       </div>
     </header>
 
@@ -96,5 +100,12 @@
       });
     });
   </script>
+  <script>
+    function toggleMenu() {
+      const links = document.getElementById('nav-links');
+      links.classList.toggle('show');
+    }
+  </script>
+  
 </body>
 </html>
