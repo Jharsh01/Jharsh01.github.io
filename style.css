@@ -39,11 +39,12 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   padding: 2rem 2rem 1rem;
   background-color: #0a192f;
   border-bottom: 1px solid #233554;
 }
+
 
 .title-block {
   flex: 1;
@@ -64,13 +65,14 @@ main {
 
 .nav-right {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  gap: 1rem;
+  margin-left: auto;
 }
 
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
@@ -86,6 +88,14 @@ main {
   color: #ffffff;
   text-shadow: 0 0 6px #64ffda;
 }
+
+.hamburger {
+  display: none;
+  font-size: 1.6rem;
+  color: #64ffda;
+  cursor: pointer;
+}
+
 
 .btn-glow {
   padding: 0.5rem 1rem;
@@ -319,13 +329,6 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  color: #64ffda;
-  cursor: pointer;
-  margin-left: auto;
-}
 
 
 
@@ -538,10 +541,7 @@ footer {
   text-shadow: 0 0 6px #64ffda;
 }
 /* Hide hamburger on desktop */
-/* Default: Hide hamburger */
-.hamburger {
-  display: none;
-}
+
 
 /* Mobile layout */
 @media screen and (max-width: 768px) {
@@ -592,7 +592,16 @@ footer {
   .btn-glow {
     margin-top: 0.5rem;
   }
+
+  .hamburger {
+    display: block;
+  }
+
+  #sidePanel {
+    display: flex;
+  }
 }
+
 
 
 

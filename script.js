@@ -1,12 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.getElementById('nav-links');
+  const sidePanel = document.getElementById('sidePanel');
 
-  if (hamburger && navLinks) {
+  if (hamburger && sidePanel) {
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+      sidePanel.classList.toggle('open');
     });
   }
+
+  // Close side panel when a link is clicked
+  const sideLinks = sidePanel?.querySelectorAll('a');
+  sideLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      sidePanel.classList.remove('open');
+    });
+  });
 
   // Fade-in animation
   const faders = document.querySelectorAll('.fade-in');
