@@ -547,18 +547,24 @@ footer {
 @media screen and (max-width: 768px) {
   .header-main {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    flex-wrap: nowrap;
+  }
+
+  .site-logo {
+    order: 0;
   }
 
   .title-block {
-    text-align: center;
+    order: 1;
     flex: 1;
+    text-align: center;
   }
 
   .hamburger {
+    order: 2;
     display: block;
     font-size: 1.8rem;
     color: #64ffda;
@@ -575,7 +581,6 @@ footer {
     display: none;
     flex-direction: column;
     align-items: center;
-    width: 100%;
     gap: 1rem;
     margin-top: 1rem;
   }
@@ -588,6 +593,7 @@ footer {
     margin-top: 0.5rem;
   }
 }
+
 
 
 
