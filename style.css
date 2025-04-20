@@ -102,10 +102,12 @@ main {
   text-decoration: none;
   background-color: transparent;
   transition: all 0.3s ease;
-  box-sizing: border-box;
   white-space: nowrap;
   line-height: 1.2;
+  min-width: 100px;        /* <-- Ensures it doesn't shrink */
+  text-align: center;
 }
+
 
 .btn-glow:hover {
   background-color: #3ff0c5;
@@ -697,6 +699,11 @@ a:hover {
     font-size: 2rem;
     color: #64ffda;
     cursor: pointer;
+  }
+}
+@media screen and (min-width: 769px) {
+  .hamburger {
+    display: none !important;
   }
 }
 
