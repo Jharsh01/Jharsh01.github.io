@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Handle hamburger menu
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.getElementById('nav-links');
 
@@ -9,9 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Handle fade-in animations
+  // Fade-in animation
   const faders = document.querySelectorAll('.fade-in');
-
   if ('IntersectionObserver' in window) {
     const appearOnScroll = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
       appearOnScroll.observe(fader);
     });
   } else {
-    // fallback for older browsers
     faders.forEach(fader => fader.classList.add('visible'));
   }
 });
