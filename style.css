@@ -623,6 +623,15 @@ a:hover {
   color: white;
   text-shadow: 0 0 6px #64ffda;
 }
+/* Hide desktop resume on mobile, and vice versa */
+.desktop-resume {
+  display: inline-block;
+}
+
+.mobile-resume {
+  display: none;
+}
+
 
 /* === Hide desktop nav on mobile === */
 @media screen and (max-width: 768px) {
@@ -633,7 +642,15 @@ a:hover {
     flex-wrap: wrap;
     padding: 1rem;
   }
+  .desktop-resume {
+    display: none;
+  }
 
+  .mobile-resume {
+    display: inline-block;
+    margin-top: 1rem;
+    text-align: center;
+  }
   .title-block {
     text-align: left;
     flex-grow: 1;
